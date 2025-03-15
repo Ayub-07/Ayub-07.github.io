@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates | Mohammed Ayub</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <style>
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .certificate-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .certificate-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .certificate-info {
+            padding: 1.5rem;
+        }
+
+        .certificate-info h3 {
+            margin-bottom: 0.5rem;
+            color: #2d3436;
+        }
+
+        .certificate-info p {
+            color: #636e72;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .certificate-date {
+            color: #0984e3;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .back-to-home {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #0984e3;
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .back-to-home:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Mohammed Ayub</div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#education">Education</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="certificates">
+            <h2>My Certificates</h2>
+            <div class="certificates-grid">
+                <!-- App Development Certificate -->
+                <div class="certificate-card">
+                    <a href="./assets/certificates/app-dev-cert.jpg" data-lightbox="certificates" data-title="App Development Certificate">
+                        <img src="./assets/certificates/app-dev-cert.jpg" alt="App Development Certificate" class="certificate-image" loading="lazy">
+                    </a>
+                    <div class="certificate-info">
+                        <h3>Android Developer Virtual Internship</h3>
+                        <p>Completed the Android Developer Virtual Internship by AICTE-Eduskills, gaining hands-on experience in building Android applications using modern development tools and frameworks. Learned essential concepts of app development, UI/UX design, and debugging to create functional and user-friendly mobile applications.</p>
+                        <span class="certificate-date">2025</span>
+                    </div>
+                </div>
+                <!-- Smart Interviews Certificate -->
+                <div class="certificate-card">
+                    <a href="./assets/certificates/smart-inter-cert.jpg" data-lightbox="certificates" data-title="Smart Internship Certificate">
+                        <img src="./assets/certificates/smart-inter-cert.jpg" alt="Smart Internship Certificate" class="certificate-image" loading="lazy">
+                    </a>
+                    <div class="certificate-info">
+                        <h3>Smart Interviews - Certified Smart Coder</h3>
+                        <p>Earned certification from Smart Interviews, showcasing proficiency in data structures, algorithms, and problem-solving, with hands-on experience in optimizing code efficiency, implementing fundamental to intermediate DSA concepts, and solving coding challenges.</p>
+                        <span class="certificate-date">2024</span>
+                    </div>
+                </div>
+
+                
+
+                <!-- Smart India Hackathon Certificate -->
+                <div class="certificate-card">
+                    <a href="./assets/certificates/sih-cert.jpg" data-lightbox="certificates" data-title="Smart India Hackathon Certificate">
+                        <img src="./assets/certificates/sih-cert.jpg" alt="Smart India Hackathon Certificate" class="certificate-image" loading="lazy">
+                    </a>
+                    <div class="certificate-info">
+                        <h3> Technovanza 4.0 - Smart India Hackathon</h3>
+                        <p>Participated in Technovanza 4.0, an internal hackathon for Smart India Hackathon, collaborating on innovative solutions and problem-solving under competitive conditions. Gained experience in teamwork, brainstorming, and rapid prototyping to develop practical tech solutions.</p>
+                        <span class="certificate-date">2024</span>
+                    </div>
+                </div>
+
+                <!-- Java Training Certificate -->
+                <div class="certificate-card">
+                    <a href="./assets/certificates/java-train-cert.jpg" data-lightbox="certificates" data-title="Java Training Certificate">
+                        <img src="./assets/certificates/java-train-cert.jpg" alt="Java Training Certificate" class="certificate-image" loading="lazy">
+                    </a>
+                    <div class="certificate-info">
+                        <h3>Java Training - Spoken Tutorial IIT Bombay</h3>
+                        <p>Completed Java training, gaining a strong foundation in object-oriented programming (OOP), exception handling, multithreading, and data structures. Developed hands-on experience in writing efficient Java programs and understanding core concepts.</p>
+                        <span class="certificate-date">2023</span>
+                    </div>
+                </div>
+
+                <!-- SQL Training Certificate -->
+                <div class="certificate-card">
+                    <a href="./assets/certificates/sql-trianig-cert.jpg" data-lightbox="certificates" data-title="SQL Training Certificate">
+                        <img src="./assets/certificates/sql-trianig-cert.jpg" alt="SQL Training Certificate" class="certificate-image" loading="lazy">
+                    </a>
+                    <div class="certificate-info">
+                        <h3>SQL Training - Spoken Tutorial IIT Bombay</h3>
+                        <p>Completed SQL training, gaining a strong foundation in database management, SQL queries, and database design. Developed hands-on experience in writing efficient SQL programs and understanding core concepts.</p>
+                        <span class="certificate-date">2023</span>
+                    </div>
+                </div>
+
+                <!-- C Programming Training Certificate -->
+                <div class="certificate-card">
+                    <a href="./assets/certificates/c-train-cert.jpg" data-lightbox="certificates" data-title="C Programming Training Certificate">
+                        <img src="./assets/certificates/c-train-cert.jpg" alt="C Programming Training Certificate" class="certificate-image" loading="lazy">
+                    </a>
+                    <div class="certificate-info">
+                        <h3>C Programming - Spoken Tutorial IIT Bombay</h3>
+                        <p>Completed C programming training, gaining a strong foundation in programming concepts and fundamentals using C programming language. Developed hands-on experience in writing efficient C programs and understanding core concepts.</p>
+                        <span class="certificate-date">2023</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="index.html" class="back-to-home">
+        <i class="fas fa-home"></i>
+    </a>
+
+    <footer>
+        <p>&copy; 2025 Mohammed Ayub. All rights reserved.</p>
+    </footer>
+
+    <!-- Add lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script>
+        // Initialize lightbox
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'maxWidth': 1000
+        });
+    </script>
+</body>
+</html> 
