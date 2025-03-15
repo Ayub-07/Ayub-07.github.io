@@ -10,6 +10,11 @@
 <body>
     <nav class="navbar">
         <div class="logo">Mohammed Ayub</div>
+        <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -24,7 +29,10 @@
         <section id="home" class="hero">
             <div class="hero-content">
                 <h1>Welcome to My Portfolio</h1>
-                <p class="tagline">I'm a <span class="typing">Web Developer & Problem Solver</span></p>
+                <p class="tagline">
+                   
+                    <span class="typing">I'm a Web Developer & Problem Solver</span>
+                </p>
                 <img class="profile-img" src="photo.jpg" alt="Mohammed Ayub" />
                 <a href="./assets/Mohammed_Ayub_CV  15-3.pdf" class="cta-button" download>
                     <i class="fas fa-download"></i> Download CV
@@ -100,5 +108,23 @@
     <footer>
         <p>&copy; 2025 Mohammed Ayub. All rights reserved.</p>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
