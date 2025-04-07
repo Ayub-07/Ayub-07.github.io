@@ -20,6 +20,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="certificates.html">Certificates</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -34,7 +35,7 @@
                     <span class="typing">I'm a Web Developer & Problem Solver</span>
                 </p>
                 <img class="profile-img" src="photo.jpg" alt="Mohammed Ayub" />
-                <a href="./assets/Mohammed_Ayub_CV  15-3.pdf" class="cta-button" download>
+                <a href="./assets/Mohammed_Ayub_CV  3-apr.pdf" class="cta-button" download>
                     <i class="fas fa-download"></i> Download CV
                 </a>
             </div>
@@ -89,6 +90,72 @@
             </div>
         </section>
 
+        <section id="projects" class="projects">
+            <h2>My Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Web Development Projects -->
+                <div class="project-card web">
+                    <img src="assets/portfolio-screeshot.jpg" alt="Portfolio Website Screenshot" class="project-img">
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>A responsive portfolio website showcasing my skills and projects. (You are currently on this website)</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Ayub-07/Ayub-07.github.io" target="_blank" class="project-link">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more web projects here -->
+                <div class="project-card web">
+                    <img src="assets/bat-ball-stump-ss.jpg" alt="Web Project 2 Screenshot" class="project-img">
+                    <div class="project-info">
+                        <h3>Bat Ball Stump Game</h3>
+                        <p>A simple web-based game similar to Rock-Paper-Scissors, but with a cricket theme using BAT, BALL, and STUMP as the three choices.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Ayub-07/Bat-Ball-Stump-Game" target="_blank" class="project-link">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card web">
+                    <img src="assets/Amazon-clone-ss.jpg" alt="Web Project 2 Screenshot" class="project-img">
+                    <div class="project-info">
+                        <h3>Amazon Clone - Non Functional</h3>
+                        <p>A responsive Amazon clone website built with HTML and CSS. This project replicates the main features and design of Amazon's e-commerce platform.a</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Ayub-07/Amazon-Clone" target="_blank" class="project-link">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Python Projects -->
+                <div class="project-card python">
+                    <div class="project-slider">
+                        <button class="slider-arrow left-arrow">&lt;</button>
+                        <div class="slider-container">
+                            <img src="assets/python1.jpg" alt="Python Project Screenshot 1" class="project-img active">
+                            <img src="assets/python2.jpg" alt="Python Project Screenshot 2" class="project-img">
+                            <img src="assets/python3.jpg" alt="Python Project Screenshot 3" class="project-img">
+                            <img src="assets/python4.jpg" alt="Python Project Screenshot 4" class="project-img">
+                        </div>
+                        <button class="slider-arrow right-arrow">&gt;</button>
+                    </div>
+                    <div class="project-info">
+                        <h3>Facial Expression Recognition Based Restaurant Rating System</h3>
+                        <p>A deep learning-based local system that analyzes customer facial expressions to provide restaurant ratings and feedback. This system uses facial expression recognition to automatically detect customer satisfaction levels and generate ratings.</p>
+                        <p> Technologies Used: Python, TensorFlow /Keras, OpenCV, Django, HTML, CSS, JavaScript, MySQL</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Ayub-07/Deep-Learning-Facial-Expression-Recognition" target="_blank" class="project-link">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="contact" class="contact">
             <h2>Contact Me</h2>
             <div class="contact-info">
@@ -110,6 +177,7 @@
     </footer>
 
     <script>
+        // Mobile menu functionality
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
 
@@ -123,6 +191,78 @@
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
+            });
+        });
+
+        // Project filtering functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            let activeFilter = null;
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filter = button.getAttribute('data-filter');
+                    
+                    // If clicking the same button, hide all projects
+                    if (activeFilter === filter) {
+                        projectCards.forEach(card => {
+                            card.style.display = 'none';
+                        });
+                        button.classList.remove('active');
+                        activeFilter = null;
+                    } else {
+                        // Remove active class from all buttons
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        // Add active class to clicked button
+                        button.classList.add('active');
+                        
+                        // Show/hide projects based on filter
+                        projectCards.forEach(card => {
+                            if (card.classList.contains(filter)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+                        activeFilter = filter;
+                    }
+                });
+            });
+
+            // Initially hide all projects
+            projectCards.forEach(card => {
+                card.style.display = 'none';
+            });
+
+            // Slider functionality
+            const sliders = document.querySelectorAll('.project-slider');
+            sliders.forEach(slider => {
+                const images = slider.querySelectorAll('.project-img');
+                const leftArrow = slider.querySelector('.left-arrow');
+                const rightArrow = slider.querySelector('.right-arrow');
+                let currentIndex = 0;
+
+                function showImage(index) {
+                    images.forEach(img => img.classList.remove('active'));
+                    images[index].classList.add('active');
+                }
+
+                function nextImage() {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    showImage(currentIndex);
+                }
+
+                function prevImage() {
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                    showImage(currentIndex);
+                }
+
+                leftArrow.addEventListener('click', prevImage);
+                rightArrow.addEventListener('click', nextImage);
+
+                // Show first image initially
+                showImage(0);
             });
         });
     </script>

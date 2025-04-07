@@ -9,6 +9,9 @@
     <!-- Add lightbox CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
     <style>
+        h2{
+            margin-top: 2rem;
+        }
         .certificates-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -24,6 +27,9 @@
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .certificate-card:hover {
@@ -33,11 +39,16 @@
         .certificate-image {
             width: 100%;
             height: 200px;
-            object-fit: cover;
+            object-fit: contain;
+            background: #f8f9fa;
+            padding: 1rem;
         }
 
         .certificate-info {
             padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
         .certificate-info h3 {
@@ -49,12 +60,14 @@
             color: #636e72;
             font-size: 0.9rem;
             margin-bottom: 1rem;
+            flex-grow: 1;
         }
 
         .certificate-date {
             color: #0984e3;
             font-size: 0.8rem;
             font-weight: bold;
+            margin-top: auto;
         }
 
         .back-to-home {
@@ -72,6 +85,48 @@
         .back-to-home:hover {
             transform: translateY(-3px);
         }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .certificates-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1rem;
+                max-width: 100%;
+            }
+
+            .certificate-card {
+                width: 100%;
+                margin: 0 auto;
+                max-width: 400px;
+            }
+
+            .certificate-image {
+                height: 250px;
+            }
+
+            .certificate-info {
+                padding: 1.25rem;
+            }
+
+            .certificate-info h3 {
+                font-size: 1.1rem;
+            }
+
+            .certificate-info p {
+                font-size: 0.85rem;
+            }
+
+            .certificate-date {
+                font-size: 0.75rem;
+            }
+
+            /* Smooth scrolling for mobile */
+            .certificates {
+                scroll-behavior: smooth;
+            }
+        }
     </style>
 </head>
 <body>
@@ -87,6 +142,7 @@
             <li><a href="index.html#about">About</a></li>
             <li><a href="index.html#education">Education</a></li>
             <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
             <li><a href="certificates.html">Certificates</a></li>
             <li><a href="index.html#contact">Contact</a></li>
         </ul>
@@ -96,6 +152,44 @@
         <section class="certificates">
             <h2>My Certificates</h2>
             <div class="certificates-grid">
+                <div class="certificates-grid">
+                <!-- CSS Essentials Certificate -->
+                <div class="certificate-card">
+                    <a href="./assets/certificates/css-essentials-cert.jpg" data-lightbox="certificates" data-title="CSS Essentials Certificate">
+                        <img src="./assets/certificates/css-essentials-cert.jpg" alt="CSS Essentials Certificate" class="certificate-image" loading="lazy">
+                    </a>
+                    <div class="certificate-info">
+                        <h3>CSS Essentials - Cisco Networking Academy</h3>
+                        <p>Completed a foundational course on Cascading Style Sheets (CSS), covering core concepts like selectors, layout techniques, colors, typography, and responsive design. Gained practical experience in styling modern, visually appealing web pages.</p>
+                        <span class="certificate-date">2025</span>
+                    </div>
+                </div>
+                <!-- Be10x AI TOOLS workshop Certificate -->
+                <div class="certificate-card">
+                    <a href="./assets/certificates/be10x-aitools-workshop-cert.jpg" data-lightbox="certificates" data-title="Be10x AI TOOLS workshop Certificate">
+                        <img src="./assets/certificates/be10x-aitools-workshop-cert.jpg" alt="Be10x AI TOOLS workshop Certificate" class="certificate-image" loading="lazy">
+                    </a>
+                    <div class="certificate-info">
+                        <h3>Be10x-AI TOOLS workshop</h3>
+                        <p>Attended an online workshop that introduced various AI tools and their practical applications. Learned how to use AI to improve productivity, creativity, and efficiency in both personal and professional tasks.</p>
+                        <span class="certificate-date">2025</span>
+                    </div>
+                </div>
+
+                
+
+                <!-- Dhruv Rathee AI Materclass Certificate -->
+                <div class="certificate-card">
+                    <a href="./assets/certificates/dhruv-rathee-AI-masterclass-cert.jpg" data-lightbox="certificates" data-title="Dhruv Rathee AI Masterclass Certificate">
+                        <img src="./assets/certificates/dhruv-rathee-AI-masterclass-cert.jpg" alt="Dhruv Rathee AI Masterclass Certificate" class="certificate-image" loading="lazy">
+                    </a>
+                    <div class="certificate-info">
+                        <h3>Dhruv Rathee - AI Masterclass</h3>
+                        <p>Attended an online masterclass by Dhruv Rathee focused on practical AI tools for image generation, video creation, code assistance, and data visualization. Gained insights into how these tools are revolutionizing creativity, productivity, and tech workflows.</p>
+                        <span class="certificate-date">2025</span>
+                    </div>
+                </div>
+
                 <!-- App Development Certificate -->
                 <div class="certificate-card">
                     <a href="./assets/certificates/app-dev-cert.jpg" data-lightbox="certificates" data-title="App Development Certificate">
@@ -109,8 +203,8 @@
                 </div>
                 <!-- Smart Interviews Certificate -->
                 <div class="certificate-card">
-                    <a href="./assets/certificates/smart-inter-cert.jpg" data-lightbox="certificates" data-title="Smart Internship Certificate">
-                        <img src="./assets/certificates/smart-inter-cert.jpg" alt="Smart Internship Certificate" class="certificate-image" loading="lazy">
+                    <a href="./assets/certificates/smart-inter-cert.jpg" data-lightbox="certificates" data-title="Smart Interviews Certificate">
+                        <img src="./assets/certificates/smart-inter-cert.jpg" alt="Smart Interviews Certificate" class="certificate-image" loading="lazy">
                     </a>
                     <div class="certificate-info">
                         <h3>Smart Interviews - Certified Smart Coder</h3>
