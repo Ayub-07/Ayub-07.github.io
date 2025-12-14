@@ -354,6 +354,34 @@ section h2 {
     margin-bottom: 1rem;
 }
 
+.cgpa-display {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #0984e3, #74b9ff);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 10px rgba(9, 132, 227, 0.3);
+}
+
+.cgpa-label {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cgpa-value {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 /* Skills Section */
 .skills {
     background-color: white;
